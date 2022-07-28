@@ -6,6 +6,13 @@
 
 - Ruby
 
+## Getting Started
+
+- clone the repository by running
+git clone `https://github.com/Ghilain/school-library.git`
+- navigate to the folder
+  cd `school-library`
+
 ## Author
 
 👤 **Ghilain Ishimwe** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
