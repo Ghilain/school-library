@@ -6,32 +6,6 @@ def main
   app.run
 end
 
-def options
-  puts 'Welcome to School Library App!'
-
-  puts 'Choose an option by entering a number:'
-
-  puts
-
-  {
-
-    1 => 'List all books',
-
-    2 => 'List all people',
-
-    3 => 'Create a person',
-
-    4 => 'Create a book',
-
-    5 => 'Create a rental',
-
-    6 => 'List all rentals for a given person id',
-
-    7 => 'Exit'
-
-  }
-end
-
 def option(option)
   option_list = { 1 => 'list_books',
                   2 => 'list_people',
