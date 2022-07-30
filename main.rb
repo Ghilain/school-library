@@ -6,7 +6,7 @@ def main
   app.run
 end
 
-def actions
+def options
   puts 'Welcome to School Library App!'
 
   puts 'Choose an option by entering a number:'
@@ -32,8 +32,8 @@ def actions
   }
 end
 
-def action(action)
-  action_list = { 1 => 'list_books',
+def option(option)
+  option_list = { 1 => 'list_books',
                   2 => 'list_people',
                   3 => 'add_person',
                   4 => 'add_book',
@@ -41,9 +41,9 @@ def action(action)
                   6 => 'list_rentals_by_person_id',
                   7 => 'exit' }
 
-  if action_list.key?(action)
+  if option_list.key?(option)
 
-    send(action_list[action])
+    send(option_list[option])
 
   else
 

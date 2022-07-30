@@ -11,11 +11,11 @@ class App
   end
 
   def run
-    actions.each { |key, value| puts "#{key}: #{value}" }
+    options.each { |key, value| puts "#{key}: #{value}" }
 
-    action = gets.chomp.to_i
+    option = gets.chomp.to_i
 
-    action(action)
+    option(option)
   end
 
   private
