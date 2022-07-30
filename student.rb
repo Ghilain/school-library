@@ -3,8 +3,8 @@ require_relative './person'
 class Student < Person
   attr_reader :classroom
 
-  def initialize(classroom, age, name = 'Unknown', parent_permission: true)
-    super(name, age, parent_permission)
+  def initialize(classroom, name = 'unknown', age, parent_permission: true) # rubocop:todo Style/OptionalArguments
+    super(name, age, parent_permission: parent_permission)
     @classroom = classroom
   end
 
