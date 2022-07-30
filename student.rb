@@ -1,9 +1,9 @@
 require_relative './person'
 
 class Student < Person
-  attr_reader :classroom
+  attr_accessor :classroom
 
-  def initialize(classroom, name = 'unknown', age, parent_permission: true) # rubocop:todo Style/OptionalArguments
+  def initialize(classroom, age, name = 'ben', parent_permission: true)
     super(name, age, parent_permission: parent_permission)
     @classroom = classroom
   end
@@ -12,7 +12,7 @@ class Student < Person
     '¯\(ツ)/¯'
   end
 
-  def classroom=(classroom)
+  def classroom=(classroom) # rubocop:todo Lint/DuplicateMethods
     @classroom = classroom
     classroom.student.push(self) unless classroom.student.include?(self)
   end

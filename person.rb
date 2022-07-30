@@ -5,7 +5,7 @@ class Person < Nameable
   attr_accessor :name, :age
   attr_reader :id, :rentals
 
-  def initialize(age, name, parent_permission: true)
+  def initialize(name = 'unknown', age, parent_permission: true) # rubocop:todo Style/OptionalArguments
     super()
     @id = Random.rand(1..1000)
     @name = name
@@ -13,14 +13,6 @@ class Person < Nameable
     @parent_permission = parent_permission
     @rentals = []
   end
-
-  private
-
-  def is_of_age? # rubocop:todo Naming/PredicateName
-    @age >= 18
-  end
-
-  public
 
   def can_use_services?
     is_of_age? || @parent_permission
@@ -32,5 +24,11 @@ class Person < Nameable
 
   def add_rental(date, book)
     Rental.new(date, self, book)
+  end
+
+  private
+
+  def is_of_age? # rubocop:todo Naming/PredicateName
+    @age >= 18
   end
 end
