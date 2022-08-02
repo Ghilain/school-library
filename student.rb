@@ -12,7 +12,7 @@ class Student < Person
     '¯\(ツ)/¯'
   end
 
-  def classroom=(classroom) # rubocop:todo Lint/DuplicateMethods
+  def classroom # rubocop:todo Lint/DuplicateMethods
     @classroom = classroom
     classroom.student.push(self) unless classroom.student.include?(self)
   end
